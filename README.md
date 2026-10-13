@@ -8,15 +8,13 @@ Illuminate components are constrained to `illuminate/support`, `illuminate/contr
 
 ## Install
 
-Packagist does not host these packages. Composer does not read repositories from a dependency, so an application has to register each GitHub repository itself:
+Install [kschroeder/spaced-tracker-laravel](https://packagist.org/packages/kschroeder/spaced-tracker-laravel) from Packagist. Composer installs `kschroeder/spaced-tracker` from Packagist as well:
 
 ```bash
-composer config repositories.spaced-tracker vcs https://github.com/kschroeder/spaced-tracker
-composer config repositories.spaced-tracker-laravel vcs https://github.com/kschroeder/spaced-tracker-laravel
 composer require kschroeder/spaced-tracker-laravel:^1.0
 ```
 
-To work on this repository, clone it and run `composer install`. That clones `kschroeder/spaced-tracker` from GitHub. Replace that repository entry with a path repository of `../spaced-tracker` when Composer should symlink a neighboring checkout instead.
+To work on this repository, clone it and run `composer install`. That clones `kschroeder/spaced-tracker` from GitHub, because this checkout's `composer.json` lists that repository. Replace that entry with a path repository of `../spaced-tracker` when Composer should symlink a neighboring checkout instead.
 
 Laravel package discovery registers `SpacedTracker\Laravel\SpacedTrackerServiceProvider` and the `SpacedTracker` facade alias. Register the provider yourself only if discovery is disabled.
 
