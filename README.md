@@ -1,6 +1,6 @@
 # kschroeder/spaced-tracker-laravel
 
-Laravel integration for [kschroeder/spaced-tracker](https://github.com/kschroeder/spaced-tracker), version 1.0.0. MIT license. Copyright 2026 Kevin Schroeder.
+Laravel integration for [kschroeder/spaced-tracker](https://github.com/kschroeder/spaced-tracker), version 1.0.0. MIT license.
 
 This package exists because a service provider and a facade must extend Laravel classes. The Space-Track client itself is framework-agnostic. Mezzio, Slim, and any other PSR-11 container should use `SpacedTracker\Integration\Psr11ClientFactory` from the core package instead of this one. Mezzio can register `SpacedTracker\Integration\Mezzio\ConfigProvider`.
 
@@ -98,3 +98,5 @@ Do not commit `SPACETRACK_PASSWORD` or write it into `config/spaced-tracker.php`
 `LaravelClientFactory` wraps any logger in `SpacedTracker\Log\RedactingLogger` before `ClientBuilder` sees it. `ClientBuilder` wraps the logger again. The second wrap is harmless. The redactor strips passwords, identities, cookies, and bearer tokens from messages and context. The core client also redacts request paths when predicate logging is enabled.
 
 Keep `SPACETRACK_LOG_PREDICATE_VALUES` false unless you need predicate text in logs. Paths can still contain identifiers.
+
+Copyright 2026 Kevin Schroeder.
