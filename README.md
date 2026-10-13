@@ -14,7 +14,7 @@ Install [kschroeder/spaced-tracker-laravel](https://packagist.org/packages/kschr
 composer require kschroeder/spaced-tracker-laravel:^1.0
 ```
 
-To work on this repository, clone it and run `composer install`. That clones `kschroeder/spaced-tracker` from GitHub, because this checkout's `composer.json` lists that repository. Replace that entry with a path repository of `../spaced-tracker` when Composer should symlink a neighboring checkout instead.
+To work on this repository, clone it and run `composer update`. The repository has no lock file. That command clones `kschroeder/spaced-tracker` from GitHub, because this checkout's `composer.json` lists that repository. Replace that entry with a path repository of `../spaced-tracker` when Composer should symlink a neighboring checkout instead.
 
 Laravel package discovery registers `SpacedTracker\Laravel\SpacedTrackerServiceProvider` and the `SpacedTracker` facade alias. Register the provider yourself only if discovery is disabled.
 
